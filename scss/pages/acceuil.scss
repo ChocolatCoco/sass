@@ -1,0 +1,114 @@
+@use "../utils/variables.scss" as *;
+@use "../utils/mixin.scss" as *;
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+.reservation {
+    background-color: #f7f7f7;
+    @include flex-cc;
+    flex-direction: column;
+    padding: 42px 0 0 0;
+}
+
+
+
+
+.reservation__h1 {
+    @include flex-cc;
+    text-align: center;
+    padding: 0 0 4px 0;
+    font-size: $fontsize_reservation_h1;
+}
+
+.reservation__h2 {
+    @include flex-cc;
+    text-align: center;
+    font-weight: 100;
+    color: $colour_reservation_h2;
+    font-size: $fontsize_reservation_h2;
+    padding: 10px;
+}
+
+.cadre {
+    @include flex-cc;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.fonctionnement {
+display: flex;
+ flex-direction: column;
+}
+
+.fonctionnement__h2 {
+    align-self: flex-start;
+    padding: 30px 0 15px 0 ;
+}
+
+.fonctionnement__liste {
+    @include flex-cc;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.restaurants {
+    @include flex-cc;
+    flex-direction: column;
+    background-color: $background_reservation;
+    &__cadre {
+        @include flex-cc ;
+        flex-direction: column;
+        width: 90%;
+    }
+}
+.restaurants__cadre__h2 {
+    align-self: flex-start;
+    margin: 40px 0 24px 0 ;
+    font-size: $fontsize_reservation_h1;
+}
+
+.restaurants__cadre__fleximage {
+    @include flex-cc;
+    flex-direction: column;
+    &__block {
+        @include flex-cc;
+        flex-direction: column;
+        border-radius: 20px;
+        background-color: $background_logo;
+        margin: 0 0 16px 0;
+        border-radius: 20px;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    }
+}
+.restaurants__cadre__fleximage__block__img {
+
+    width: 100%;
+    aspect-ratio: 335/174;
+    border-radius: 20px 20px 0 0;
+
+}
+.restaurants__cadre__fleximage__block__row {
+    @include flex-sbc;
+    width: 100%;
+    background-color: $background_logo;
+    border-radius: 0 0 20px 20px;
+}
+
+.restaurants__cadre__fleximage__block__row__ar {
+    background-color: transparent;
+    align-self: flex-start;
+    padding: 18px ;
+    @include flex-ss;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.restaurants__cadre__fleximage__block__row__ar__h3 {
+    font-size: $fontsize_reservation_h2;
+}
+
+.restaurants__cadre__fleximage__block__row__logo {
+    padding: 18px;
+}

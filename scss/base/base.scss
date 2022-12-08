@@ -1,0 +1,29 @@
+
+@use "../utils/variables.scss" as *;
+@use "../utils/mixin.scss" as *;
+
+// BOX SIZING SET TO BORDER BOX BY INHERITANCE
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+//   PADDING AND MARGIN RESET TO ZERO
+html *, *:before, *:after {
+    padding: 0;
+    margin: 0;
+  }
+
+// STYLES RESET
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul,ol {
+  list-style: none;
+}
+

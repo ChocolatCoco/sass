@@ -1,0 +1,29 @@
+@use "../utils/variables.scss" as *;
+@use "../utils/mixin.scss" as *;
+
+
+.header__logo {
+    @include flex-cc ;
+    padding: 22px 0 12px 0;
+    background-color: $background_logo;
+    position: relative;
+}
+
+.header__logo__arrow {
+    position: absolute;
+    left: 10%;
+}
+
+.header__logo__food {
+    aspect-ratio: 392/68;
+    height:$logo-height ;
+}
+
+.header__search {
+    @include flex-cc;
+    height: 52px;
+    background-color: $background_search;
+    gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+

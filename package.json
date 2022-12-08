@@ -1,0 +1,12 @@
+{
+  "name": "p3",
+  "version": "1.0.0",
+  "description": "P3",
+  "main": "index.js",
+  "scripts": {
+    "chocolat": "sass --watch ./scss/main.scss:./css/style.css",
+    "chocolat2": "sass --watch ./scss/restaurants.scss:./css/restaurants.css"
+  },
+  "author": "gabriel",
+  "license": "ISC"
+}

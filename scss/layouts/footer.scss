@@ -1,0 +1,26 @@
+@use "../utils/variables.scss" as *;
+@use "../utils/mixin.scss" as *;
+
+.flex-c {
+    @include flex-ss ;
+    flex-direction: column;
+    padding: 30px;
+    background-color: $background-c;
+    color: $colour-c;
+    gap: 20px;
+    line-height: 1.675;
+}
+
+.flex-c__logo {
+    width: 100px;
+    filter: invert(83%) sepia(67%) saturate(9%) hue-rotate(187deg) brightness(108%) contrast(102%);
+}
+
+.flex-c__liste {
+    @include flex-ss ;
+    flex-direction: column;
+}
+
+.flex-c__liste__li__icon {
+    margin: 0 8px 0 0;
+}

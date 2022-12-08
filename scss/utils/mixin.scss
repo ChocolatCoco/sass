@@ -1,0 +1,40 @@
+// @mixin mixin-name($argument){
+// 	background-color: $argument;
+// }
+
+// body {
+//     @include mixin-name (red) ;
+// }
+
+
+// FLEXBOX
+
+@mixin flex-cc{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin flex-sbc{
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-ss{
+	display: flex;
+	justify-content: flex-start;
+    align-items: flex-start;
+}
+
+@mixin flex-sbe {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+@mixin flex-sbstr{
+	display: flex;
+	justify-content: space-between;
+    align-items: stretch;
+}

@@ -1,0 +1,72 @@
+@use "../utils/variables.scss" as *;
+@use "../utils/mixin.scss" as *;
+
+.bouton-type1 {
+    @include flex-cc;
+    padding: 14px 18px;
+    background: linear-gradient(120deg, rgba(237, 115, 218, 1) 0%, rgba(165, 92, 220, 1) 100%);
+    border-radius: 30px;
+    color: white;
+    font-size: $bouton-type1 ;
+}
+
+.reservation__bouton {
+    margin: 20px 0 40px 0;
+}
+
+.bouton-type2 {
+    @include flex-cc;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.fonctionnement__liste__bouton {
+    gap: 20px;
+    padding: 28px 40px;
+    background-color: $background_reservation;
+    position: relative;
+    border-radius: 20px;
+
+    &::before {
+        @include flex-cc;
+        content: "1";
+        color: white;
+        background-color: $background_before;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        position: absolute;
+        left: -3.8%;
+    }
+}
+
+.fonctionnement__liste__bouton--mod2::before {
+    content: "2";
+}
+
+.fonctionnement__liste__bouton--mod3::before {
+    content: "3";
+}
+
+.fonctionnement__liste__bouton:hover {
+    background-color: $colour-hover;
+    .fonctionnement__liste__icon {
+        color: $background_icon;
+    }
+}
+
+.heart {
+    font-weight: 400;
+    font-size: $heart;
+
+}
+
+
+.heart:hover {
+
+    background: linear-gradient(120deg, rgba(237, 115, 218, 1) 0%, rgba(165, 92, 220, 1) 100%);
+    font-weight: 900;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
