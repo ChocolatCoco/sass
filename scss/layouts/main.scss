@@ -65,6 +65,7 @@
     border-radius: 20px;
     overflow: hidden;
     width: 100%;
+    white-space: nowrap;
 }
 
 .selection__90__menu__ul__list {
@@ -77,14 +78,23 @@
     @include flex-sbe;
 }
 
+.selection__90__menu__ul__list__element__description {
+    display: flex;
+    flex-direction: column;
+}
+
 .description__bold{
     font-weight: $description__bold--weight;
     font-size: $description__bold--size;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .description__thin{
     font-weight: $description__thin--weight;
     font-size: $description__thin--size;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .selection__90__menu__ul__list__element__prix {
@@ -110,6 +120,16 @@
 .selection__90__menu__ul:nth-child(n):hover .selection__90__menu__ul__animation:nth-child(n){
     @include flex-cc;
 }
+
+.selection__90__menu__ul:nth-child(n):hover .selection__90__menu__ul__list__element__description:nth-child(n){
+    max-width: 80%;
+}
+.selection__90__menu__ul:nth-child(n):hover .selection__90__menu__ul__list {
+    max-width: 80%;
+}
+
+
+
 
 .bouton-type1.commander--mod {
     padding-left:44px ;

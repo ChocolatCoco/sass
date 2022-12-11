@@ -624,6 +624,7 @@ html {
   border-radius: 20px;
   overflow: hidden;
   width: 100%;
+  white-space: nowrap;
 }
 
 .selection__90__menu__ul__list {
@@ -638,14 +639,23 @@ html {
   align-items: flex-end;
 }
 
+.selection__90__menu__ul__list__element__description {
+  display: flex;
+  flex-direction: column;
+}
+
 .description__bold {
   font-weight: 500;
   font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .description__thin {
   font-weight: 300;
   font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .selection__90__menu__ul__list__element__prix {
@@ -672,6 +682,14 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.selection__90__menu__ul:nth-child(n):hover .selection__90__menu__ul__list__element__description:nth-child(n) {
+  max-width: 80%;
+}
+
+.selection__90__menu__ul:nth-child(n):hover .selection__90__menu__ul__list {
+  max-width: 80%;
 }
 
 .bouton-type1.commander--mod {
