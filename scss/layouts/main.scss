@@ -104,8 +104,12 @@
 
 .selection__90__menu__ul__animation {
     background-color: $colour_animation;
-    min-width: 20%;
-    display: none;
+    width: 0%;
+    // display: none;
+    visibility: hidden;
+    @include flex-cc;
+    transition-property: visibility,width;
+    transition-duration: 1000ms;
 }
 
 .fa-circle-check{
@@ -115,17 +119,25 @@
     border-radius: 100%;
     outline: 4px solid $colour_animation;
     outline-offset: -2px;
+    transition: transform,opacity, 400ms;
+    transition-delay: 50ms;
 }
 
 .selection__90__menu__ul:nth-child(n):hover .selection__90__menu__ul__animation:nth-child(n){
-    @include flex-cc;
+    // @include flex-cc;
+    width: 20%;
+    visibility: unset;
+    .fa-circle-check{
+        transform: rotate(360deg);
+    }
 }
 
 .selection__90__menu__ul:nth-child(n):hover .selection__90__menu__ul__list__element__description:nth-child(n){
     max-width: 80%;
 }
 .selection__90__menu__ul:nth-child(n):hover .selection__90__menu__ul__list {
-    max-width: 80%;
+    // max-width: 80%;
+    max-width: unset;
 }
 
 
