@@ -313,6 +313,10 @@ ul, ol {
   min-height: 0;
 }
 
+body {
+  min-width: 320px;
+}
+
 /* shrikhand-regular - latin */
 @font-face {
   font-family: "Shrikhand";
@@ -486,13 +490,25 @@ html {
 .heart {
   font-weight: 400;
   font-size: 24px;
+  transition: opacity 400ms, transform 400ms;
 }
 
+@keyframes heart {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .heart:hover {
   background: linear-gradient(120deg, rgb(237, 115, 218) 0%, rgb(165, 92, 220) 100%);
   font-weight: 900;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  transform: rotate(30deg);
+  animation: heart 1000ms forwards;
+  transition: transform 400ms;
 }
 
 .flex-c {
@@ -554,6 +570,10 @@ html {
 
 .fleximage {
   display: flex;
+}
+
+.back {
+  display: contents;
 }
 
 .fleximage__img1 {
@@ -680,6 +700,7 @@ html {
 }
 
 .fa-circle-check {
+  opacity: 0;
   background-color: #ffffff;
   color: #99e2d0;
   font-size: 30px;
@@ -687,15 +708,16 @@ html {
   outline: 4px solid #99e2d0;
   outline-offset: -2px;
   transition: transform, opacity, 400ms;
-  transition-delay: 50ms;
+  transition-delay: 140ms;
 }
 
-.selection__90__menu__ul:nth-child(n):hover .selection__90__menu__ul__animation:nth-child(n) {
+.selection__90__menu__ul:nth-child(n):hover .selection__90__menu__ul__animation:nth-child(n), .selection__90__menu__ul:nth-child(n):active .selection__90__menu__ul__animation:nth-child(n) {
   width: 20%;
   visibility: unset;
 }
-.selection__90__menu__ul:nth-child(n):hover .selection__90__menu__ul__animation:nth-child(n) .fa-circle-check {
+.selection__90__menu__ul:nth-child(n):hover .selection__90__menu__ul__animation:nth-child(n) .fa-circle-check, .selection__90__menu__ul:nth-child(n):active .selection__90__menu__ul__animation:nth-child(n) .fa-circle-check {
   transform: rotate(360deg);
+  opacity: 1;
 }
 
 .selection__90__menu__ul:nth-child(n):hover .selection__90__menu__ul__list__element__description:nth-child(n) {
@@ -709,6 +731,64 @@ html {
 .bouton-type1.commander--mod {
   padding-left: 44px;
   padding-right: 44px;
+}
+
+@keyframes opacity0 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes abc {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes abc2 {
+  0% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: unset;
+  }
+}
+.selection__90__menu__ul {
+  opacity: 0;
+}
+.selection__90__menu__ul:nth-child(1) {
+  animation: 1000ms abc 100ms forwards, 1000ms abc2;
+}
+.selection__90__menu__ul:nth-child(2) {
+  animation: 1000ms abc 500ms forwards, 1000ms abc2;
+}
+.selection__90__menu__ul:nth-child(3) {
+  animation: 1000ms abc 900ms forwards, 1000ms abc2;
+}
+.selection__90__menu__ul:nth-child(4) {
+  animation: 1000ms abc 1300ms forwards, 1000ms abc2;
+}
+.selection__90__menu__ul:nth-child(5) {
+  animation: 1000ms abc 1700ms forwards, 1000ms abc2;
+}
+.selection__90__menu__ul:nth-child(6) {
+  animation: 1000ms abc 2100ms forwards, 1000ms abc2;
+}
+.selection__90__menu__ul:nth-child(7) {
+  animation: 1000ms abc 2500ms forwards, 1000ms abc2;
+}
+.selection__90__menu__ul:nth-child(8) {
+  animation: 1000ms abc 2900ms forwards, 1000ms abc2;
+}
+.selection__90__menu__ul:nth-child(9) {
+  animation: 1000ms abc 3300ms forwards, 1000ms abc2;
+}
+.selection__90__menu__ul:nth-child(10) {
+  animation: 1000ms abc 3700ms forwards, 1000ms abc2;
 }
 
 .fonctionnement__liste__icon {

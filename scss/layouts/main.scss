@@ -5,6 +5,10 @@
     display: flex;
 }
 
+.back {
+    display: contents;
+}
+
 .fleximage__img1 {
     width: 100%;
     height: auto;
@@ -113,6 +117,7 @@
 }
 
 .fa-circle-check{
+    opacity: 0;
     background-color: #ffffff;
     color: $colour_animation;
     font-size: $check_font;
@@ -120,15 +125,16 @@
     outline: 4px solid $colour_animation;
     outline-offset: -2px;
     transition: transform,opacity, 400ms;
-    transition-delay: 50ms;
+    transition-delay: 140ms;
 }
 
-.selection__90__menu__ul:nth-child(n):hover .selection__90__menu__ul__animation:nth-child(n){
+.selection__90__menu__ul:nth-child(n):hover .selection__90__menu__ul__animation:nth-child(n),.selection__90__menu__ul:nth-child(n):active .selection__90__menu__ul__animation:nth-child(n){
     // @include flex-cc;
     width: 20%;
     visibility: unset;
     .fa-circle-check{
         transform: rotate(360deg);
+        opacity: 1;
     }
 }
 
@@ -147,3 +153,45 @@
     padding-left:44px ;
     padding-right: 44px;
 }
+
+@keyframes opacity0 {
+    0% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes abc {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes abc2 {
+    0% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: unset;
+    }
+}
+
+
+@mixin transition {
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        animation:1000ms abc #{-300 + $i * 400}ms forwards, 1000ms abc2;
+      }
+    }
+}
+
+
+.selection__90__menu__ul {
+    opacity: 0;
+    @include transition;
+}
+

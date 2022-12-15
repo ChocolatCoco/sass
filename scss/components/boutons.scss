@@ -55,12 +55,27 @@
     }
 }
 
+// .heart-container{
+//     transition: transform 400ms;
+//     transition-delay: 400ms;
+// }
+
 .heart {
     font-weight: 400;
     font-size: $heart;
+    transition:opacity 400ms, transform 400ms;
 
 }
 
+@keyframes heart {
+    0%{
+        opacity: 0.7;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
 
 .heart:hover {
 
@@ -68,5 +83,13 @@
     font-weight: 900;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-
+    transform: rotate(30deg);
+    animation: heart 1000ms forwards;
+    transition:transform 400ms;
+ 
 }
+// .heart-container:hover{
+//     transition: transform 400ms;
+//     transition-delay: 400ms;
+//     transform: rotate(-90deg);
+// }

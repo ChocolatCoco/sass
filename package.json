@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "chocolat": "sass --watch ./scss/main.scss:./css/style.css",
-    "chocolat2": "sass --watch ./scss/restaurants.scss:./css/restaurants.css"
+    "chocolat2": "sass --watch ./scss/restaurants.scss:./css/restaurants.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/",
+    "prefix2": "postcss ./css/restaurants.css --use autoprefixer -d ./css/prefixed/"
   },
   "author": "gabriel",
   "license": "ISC"

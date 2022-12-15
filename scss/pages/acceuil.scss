@@ -112,3 +112,44 @@ display: flex;
 .restaurants__cadre__fleximage__block__row__logo {
     padding: 18px;
 }
+
+@keyframes loading {
+    0%{
+        opacity: 0.7;
+        z-index: 10;
+    }
+    70%{
+        opacity: 0.7;
+        z-index: 10;
+    }
+    100%{
+        opacity: 0;
+        z-index: 10;
+    }
+}
+.loading {
+    animation: 2200ms loading;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    opacity: 0;
+    z-index: -10;
+    background-color: #ffffff;
+    @include flex-cc;
+}
+
+@keyframes spinner {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(5turn);}
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border-left: 2px solid red;
+    border-right: 2px solid aqua;
+    border-radius: 100%;
+    animation:2200ms spinner;
+}
