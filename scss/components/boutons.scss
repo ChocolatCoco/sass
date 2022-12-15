@@ -63,7 +63,7 @@
 .heart {
     font-weight: 400;
     font-size: $heart;
-    transition:opacity 400ms, transform 400ms;
+    transition:opacity 400ms;
 
 }
 
@@ -83,7 +83,6 @@
     font-weight: 900;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    transform: rotate(30deg);
     animation: heart 1000ms forwards;
     transition:transform 400ms;
  

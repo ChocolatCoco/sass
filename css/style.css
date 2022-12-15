@@ -314,7 +314,7 @@ ul, ol {
 }
 
 body {
-  min-width: 320px;
+  min-width: 0px;
 }
 
 /* shrikhand-regular - latin */
@@ -490,7 +490,7 @@ html {
 .heart {
   font-weight: 400;
   font-size: 24px;
-  transition: opacity 400ms, transform 400ms;
+  transition: opacity 400ms;
 }
 
 @keyframes heart {
@@ -506,7 +506,6 @@ html {
   font-weight: 900;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  transform: rotate(30deg);
   animation: heart 1000ms forwards;
   transition: transform 400ms;
 }
@@ -761,34 +760,34 @@ html {
   opacity: 0;
 }
 .selection__90__menu__ul:nth-child(1) {
-  animation: 1000ms abc 100ms forwards, 1000ms abc2;
+  animation: 1000ms abc -2600ms forwards, 1000ms abc2;
 }
 .selection__90__menu__ul:nth-child(2) {
-  animation: 1000ms abc 500ms forwards, 1000ms abc2;
+  animation: 1000ms abc -2200ms forwards, 1000ms abc2;
 }
 .selection__90__menu__ul:nth-child(3) {
-  animation: 1000ms abc 900ms forwards, 1000ms abc2;
+  animation: 1000ms abc -1800ms forwards, 1000ms abc2;
 }
 .selection__90__menu__ul:nth-child(4) {
-  animation: 1000ms abc 1300ms forwards, 1000ms abc2;
+  animation: 1000ms abc -1400ms forwards, 1000ms abc2;
 }
 .selection__90__menu__ul:nth-child(5) {
-  animation: 1000ms abc 1700ms forwards, 1000ms abc2;
+  animation: 1000ms abc -1000ms forwards, 1000ms abc2;
 }
 .selection__90__menu__ul:nth-child(6) {
-  animation: 1000ms abc 2100ms forwards, 1000ms abc2;
+  animation: 1000ms abc -600ms forwards, 1000ms abc2;
 }
 .selection__90__menu__ul:nth-child(7) {
-  animation: 1000ms abc 2500ms forwards, 1000ms abc2;
+  animation: 1000ms abc -200ms forwards, 1000ms abc2;
 }
 .selection__90__menu__ul:nth-child(8) {
-  animation: 1000ms abc 2900ms forwards, 1000ms abc2;
+  animation: 1000ms abc 200ms forwards, 1000ms abc2;
 }
 .selection__90__menu__ul:nth-child(9) {
-  animation: 1000ms abc 3300ms forwards, 1000ms abc2;
+  animation: 1000ms abc 600ms forwards, 1000ms abc2;
 }
 .selection__90__menu__ul:nth-child(10) {
-  animation: 1000ms abc 3700ms forwards, 1000ms abc2;
+  animation: 1000ms abc 1000ms forwards, 1000ms abc2;
 }
 
 main {
