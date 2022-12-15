@@ -29,12 +29,12 @@ ul,ol {
 
 // ATTENTION
 
-*, *:before, *:after {
+*, *::before, *::after {
   min-width: 0;
   min-height: 0;
 }
 
 // TAILLE MIN
 body {
-  min-width: 0px;
+  min-width: 320px;
 }
