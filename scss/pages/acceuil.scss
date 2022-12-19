@@ -80,6 +80,21 @@ display: flex;
         margin: 0 0 16px 0;
         border-radius: 20px;
         box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+        position: relative;
+        &::after {
+            --A:100vw;
+            content: 'Nouveau';
+            color: #227863;
+            font-weight: bold;
+            font-size: calc((20/666) * var(--A));
+            background-color: #99e2d0;
+            @include flex-cc;
+            position: absolute;
+            height: 9%;
+            width: 22%;
+            top: 10%;
+            right: 10%;
+        }
     }
 }
 .restaurants__cadre__fleximage__block__img {
@@ -87,7 +102,7 @@ display: flex;
     width: 100%;
     aspect-ratio: 335/174;
     border-radius: 20px 20px 0 0;
-
+    object-fit: cover;
 }
 .restaurants__cadre__fleximage__block__row {
     @include flex-sbc;
@@ -152,4 +167,51 @@ display: flex;
     border-right: 2px solid aqua;
     border-radius: 100%;
     animation:2200ms spinner;
+}
+
+@media all and (min-width:900px) {
+    .fonctionnement__liste {
+        flex-direction: row;
+        width: 92vw;
+        justify-content: flex-start;
+        &__bouton {
+            flex-basis: 290px;
+            flex-grow: 1;
+            white-space: nowrap;
+            max-width: 342px;
+            min-width: 260px;
+        }
+    }
+    .restaurants__cadre{
+        // max-width: 1251px;
+        max-width: 1404px;
+    }
+    .restaurants__cadre__fleximage{
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-bottom: 16px;
+        &__block{
+            max-width: 610px;
+            margin: 0;
+            &::after {
+                --A:900px;
+            }
+        }
+    }
+
+}
+
+@media all and (min-width:1389px) {
+    .fonctionnement__liste {
+        max-width: 1404px;
+        &__bouton {
+            max-width: 400px;
+        }
+    }
+
+    .fonctionnement__liste__bouton {
+        max-width: 400px;
+    }
 }
