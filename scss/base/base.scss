@@ -39,3 +39,18 @@ body {
   min-width: 320px;
   max-width: 2516px;
 }
+
+// FORM, INPUT
+
+form,input, *::before, *::after {
+  all:unset;
+}
+
+
+::placeholder, *::before, *::after {
+  all:unset;
+}
+
+form,input {
+  width: 120px;
+}

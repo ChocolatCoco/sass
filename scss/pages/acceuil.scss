@@ -215,3 +215,16 @@ display: flex;
         max-width: 400px;
     }
 }
+
+@media all and (max-width:1389px) {
+    .heart:active {
+
+        background: linear-gradient(120deg, rgba(237, 115, 218, 1) 0%, rgba(165, 92, 220, 1) 100%);
+        font-weight: 900;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: heart 1000ms forwards;
+        transition:transform 400ms;
+     
+    }
+}
